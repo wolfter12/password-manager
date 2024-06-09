@@ -7,7 +7,11 @@ from tkinter import *
 
 def save():
   with open("data.txt", "a") as data_file:
-    data_file.write(f"{website_entry.get()} | {username_entry.get()} | {password_entry.get()}\n")
+    website = website_entry.get()
+    username = username_entry.get()
+    password = password_entry.get()
+    
+    data_file.write(f"{website} | {username} | {password}\n")
     website_entry.delete(0, END)
     password_entry.delete(0, END)
 
