@@ -12,7 +12,7 @@ FONT = ("Arial", 14, "normal")
 
 window = Tk()
 window.title("Password Manager")
-window.config(padx=20, pady=20, bg=MAIN_BG)
+window.config(padx=50, pady=50, bg=MAIN_BG)
 
 canvas = Canvas(width=200, height=200, bg=MAIN_BG, highlightthickness=0)
 image = PhotoImage(file="logo.png")
