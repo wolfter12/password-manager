@@ -71,7 +71,7 @@ def generate_password():
 
     password = "".join(password_list)
 
-    password_entry.insert(END, password)
+    password_entry.insert(0, password)
 
 
 def save():
