@@ -5,6 +5,10 @@ import pyperclip
 import json
 
 
+def search():
+    pass
+
+
 def generate_password():
     letters = [
         "a",
@@ -125,9 +129,12 @@ canvas.grid(row=0, column=1)
 website_label = Label(text="Website:")
 website_label.grid(row=1, column=0)
 
-website_entry = Entry(width=40)
-website_entry.grid(row=1, column=1, columnspan=2)
+website_entry = Entry(width=22)
+website_entry.grid(row=1, column=1)
 website_entry.focus()
+
+search_button = Button(text="Search", command=search, width=14)
+search_button.grid(row=1, column=2)
 
 # Email/Username
 username_label = Label(text="Email/Username:")
@@ -144,7 +151,9 @@ password_label.grid(row=3, column=0)
 password_entry = Entry(width=22)
 password_entry.grid(row=3, column=1)
 
-generate_password_button = Button(text="Generate Password", command=generate_password)
+generate_password_button = Button(
+    text="Generate Password", command=generate_password, width=14
+)
 generate_password_button.grid(row=3, column=2)
 
 # Add Button
