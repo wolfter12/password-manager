@@ -5,7 +5,7 @@ import pyperclip
 import json
 
 
-def search():
+def find_password():
     pass
 
 
@@ -133,7 +133,7 @@ website_entry = Entry(width=22)
 website_entry.grid(row=1, column=1)
 website_entry.focus()
 
-search_button = Button(text="Search", command=search, width=14)
+search_button = Button(text="Search", command=find_password, width=14)
 search_button.grid(row=1, column=2)
 
 # Email/Username
