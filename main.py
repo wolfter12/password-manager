@@ -6,7 +6,25 @@ import json
 
 
 def find_password():
-    pass
+    website = website_entry.get()
+
+    try:
+        with open("data.json", "r") as data_file:
+            data = json.load(data_file)
+    except FileNotFoundError:
+        messagebox.showinfo(title=website, message="No Data File Found.")
+    else:
+        if website in data:
+            username = data[website]["username"]
+            password = data[website]["password"]
+            messagebox.showinfo(
+                title=website,
+                message=f"Username: {username}\nPassword: {password}",
+            )
+        else:
+            messagebox.showinfo(
+                title=website, message=f"No details for the {website} exists."
+            )
 
 
 def generate_password():
